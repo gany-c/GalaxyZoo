@@ -1,7 +1,10 @@
 function [X,y] = imgProcess(numRead, compF)
 
 y  = csvread("solutions_training.csv");
+disp("size of y = ");
 disp(size(y));
+
+
 y = y(1:numRead, :);
 
 

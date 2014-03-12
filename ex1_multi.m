@@ -14,15 +14,14 @@ m = length(y);
 disp("X and y");
 disp(size(X));
 disp(size(y));
-
 y(:,1:1) = [];
 
 % Print out some data points
-fprintf('First 10 examples from the dataset: \n');
-fprintf('  y = %.0f \n', [ y(1:10,1:1)]');
+% fprintf('First 10 examples from the dataset: \n');
+% fprintf('  y = %.0f \n', [ y(1:10,1:1)]');
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+headerRow = "GalaxyID,Class1.1,Class1.2,Class1.3,Class2.1,Class2.2,Class3.1,Class3.2,Class4.1,Class4.2,Class5.1,Class5.2,Class5.3,Class5.4,Class6.1,Class6.2,Class7.1,Class7.2,Class7.3,Class8.1,Class8.2,Class8.3,Class8.4,Class8.5,Class8.6,Class8.7,Class9.1,Class9.2,Class9.3,Class10.1,Class10.2,Class10.3,Class11.1,Class11.2,Class11.3,Class11.4,Class11.5,Class11.6";
+
 
 % Scale features and set them to zero mean
 fprintf('Normalizing Features ...\n');
