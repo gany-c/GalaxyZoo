@@ -90,13 +90,13 @@ y(:,1:1) = [];
 X = [ones(size(X,1), 1) X];
 
 % Calculate the parameters from the normal equation
-theta = normalEqn(X, y);
+normal_theta = normalEqn(X, y);
 
 % Display normal equation's result
 fprintf('Theta computed from the normal equations: \n');
-%fprintf(' %f \n', theta);
-disp(size(theta));
+%fprintf(' %f \n', normal_theta);
+disp(size(normal_theta));
 fprintf('\n');
 
-
+applyResults(theta, 53, headerRow);
 
