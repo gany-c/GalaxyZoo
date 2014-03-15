@@ -9,7 +9,7 @@ clear ; close all; clc
 fprintf('Loading data ...\n');
 
 %% Load Data
-[X,y] = imgProcess(12000,53);
+[X,y] = imgProcess(42000,8);
 m = length(y);
 disp("X and y");
 disp(size(X));
@@ -78,7 +78,7 @@ fprintf('\n');
 
 %% Load Data
 %% Load Data
-[X,y] = imgProcess(12,53);
+[X,y] = imgProcess(12,8);
 m = length(y);
 disp("X and y");
 disp(size(X));
@@ -98,5 +98,5 @@ fprintf('Theta computed from the normal equations: \n');
 disp(size(normal_theta));
 fprintf('\n');
 
-applyResults(theta, 53, headerRow);
+applyResults(theta, 8, headerRow);
 

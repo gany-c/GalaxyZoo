@@ -3,6 +3,8 @@ function [] = applyResults(theta, compF, headerRow)
 
 
 X = [];
+galaxyIdColumn = [];
+
 filelist = readdir ("images_test_rev1");
 disp(numel(filelist));
 for ii = 1:numel(filelist)
@@ -10,6 +12,10 @@ for ii = 1:numel(filelist)
   if (regexp (filelist{ii}, "^\\.\\.?$"))
     continue;
   endif
+
+  fileName = strtok(filelist{ii},".");
+  fileId = str2num(fileName);
+  galaxyIdColumn = [galaxyIdColumn; fileId];
   I = imread (["images_test_rev1/" filelist{ii}]);
   J = reshape(I, size(I,1),size(I,2)*3);
   J = J/255;	
@@ -51,4 +57,6 @@ disp("size of theta");
 disp(size(theta));
 
 resultSet = X * theta;
-
+resultSet = [galaxyIdColumn resultSet];
+save results.csv headerRow;
+dlmwrite("results.csv",resultSet,"-append","delimiter",",")
