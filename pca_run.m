@@ -8,7 +8,7 @@
 % U, S are nxn
 [U, S] = pca(X_norm);
 
-%first 100 eigen vectors
+%first 100 eigen vectors, change this to what u want
 K = 100;
 %Project data
 % X is (mxn)*(nxk) = (mxk) => reduction
